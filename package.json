@@ -1,0 +1,24 @@
+{
+  "name": "kg-cli",
+  "version": "1.0.0",
+  "description": "公瑾脚手架",
+  "bin": {
+    "kg-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "muzhidong",
+  "license": "ISC",
+  "dependencies": {
+    "cli-table3": "^0.6.0",
+    "commander": "^7.2.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^8.0.0",
+    "inquirer-autocomplete-prompt": "^1.3.0",
+    "nedb": "^1.8.0",
+    "ora": "^5.4.0",
+    "rxjs": "^6.6.7"
+  }
+}
