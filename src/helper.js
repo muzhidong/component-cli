@@ -1,6 +1,7 @@
 const commander = require('commander');
 const inquirer = require('inquirer');
 const chalk = require('chalk');
+const Rx = require('rxjs');
 const fs = require('fs');
 const {
   exec,
@@ -49,19 +50,59 @@ function printHelp() {
 
 // Promise化
 function promptPromise(question) {
-  return new Promise((resolve, reject) => {
-    inquirer.prompt(question).then((res) => {
-      resolve({
-        state: 'success',
-        data: res
-      });
-    }).catch(err => {
+
+  // return new Promise((resolve, reject) => {
+  //   inquirer.prompt(question).then((res) => {
+  //     resolve({
+  //       state: 'success',
+  //       data: res
+  //     });
+  //   }).catch(err => {
+  //     resolve({
+  //       state: 'error',
+  //       err,
+  //     });
+  //   });
+  // })
+
+  let data = {};
+  let answerIdx = 0;
+  let len = question.length;
+
+  function func(resolve, reject) {
+
+    let prompts = new Rx.Subject();
+    inquirer.prompt(prompts).ui.process.subscribe(res => {
+      data[res.name] = res.answer;
+      if (answerIdx < len) {
+        // 递归
+        func(resolve, reject);
+      } else {
+        prompts.complete();
+        // 返回值
+        resolve({
+          state: 'success',
+          data,
+        })
+      }
+    }, err => {
+      prompts.error(err);
+      // 返回错误
       resolve({
         state: 'error',
         err,
-      });
+      })
     });
-  })
+
+    prompts.next(question[answerIdx]);
+    answerIdx++;
+
+  }
+
+  return new Promise((resolve, reject) => {
+    func(resolve, reject)
+  });
+
 }
 
 function handleException(err) {
