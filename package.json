@@ -1,6 +1,6 @@
 {
   "name": "kg-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "公瑾脚手架",
   "bin": {
     "kg-cli": "./bin/index.js"
