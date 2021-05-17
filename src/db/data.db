@@ -32,7 +32,6 @@
 {"name":"image-cropper","path":"src/common-components/image-cropper","class":"UI型图片处理组件","desc":"图片裁剪器","type":"component","_id":"mJNuPFcI97EaHI5M"}
 {"name":"nav-bar","path":"src/common-components/nav-bar","class":"UI型其他通用组件","desc":"导航栏","type":"component","_id":"mLqqh9ORVFfaOe1n"}
 {"name":"tpl-subpackage-sass","path":"tpl-subpackage-sass","desc":"sass开发的提供分包小程序模板","type":"template","_id":"n3qTEfdGky7tJ31c"}
-{"name":"test2","desc":"修改描述","type":"template","path":"test2","_id":"nn6uAdzNW4r54TDQ"}
 {"name":"base-modal","path":"src/common-components/base-modal","class":"UI型对话框组件","desc":"基本模态框","type":"component","_id":"nyqK38ybSzlDcdJ4"}
 {"name":"label-input","path":"src/common-components/label-input","class":"UI型表单处理组件","desc":"输入框","type":"component","_id":"o9Hu9l2wcLYqNBbw"}
 {"type":"config","name":"init","value":1,"_id":"oAuHliAm8ZZ985wp"}
@@ -43,5 +42,4 @@
 {"name":"no-content","path":"src/common-components/no-content","class":"UI型其他通用组件","desc":"空内容提示","type":"component","_id":"uEjdVcSEwZC0HoLK"}
 {"name":"nav-pager","path":"src/common-components/nav-pager","class":"UI型其他通用组件","desc":"导航分页器","type":"component","_id":"xnuK3NhmdnhXqviV"}
 {"name":"subscribe-modal","path":"src/business-components/subscribe-modal","class":"业务组件","desc":"模板订阅框","type":"component","_id":"y3WreegiMwYXizmd"}
-{"name":"test2","desc":"update 你是我的天堂","type":"component","path":"src/common-components/test2","class":"UI型名片组件","_id":"zDvpzOwBc1eYwedT"}
 {"name":"list-item","path":"src/common-components/list-item","class":"UI型列表、条目组件","desc":"列表条目","type":"component","_id":"zREdf3VuJuDe8EXI"}
