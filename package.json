@@ -1,15 +1,26 @@
 {
-  "name": "kg-cli",
-  "version": "1.0.1",
-  "description": "公瑾脚手架",
+  "name": "cpn-cli",
+  "version": "1.0.0",
+  "description": "一个提供快速引入各种前端框架编写的可复用组件的脚手架",
   "bin": {
-    "kg-cli": "./bin/index.js"
+    "cpn-cli": "./bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "link": "npm link",
+    "unlink": "npm uninstall -g cpn-cli",
+    "audit": "npm audit",
+    "whoami": "npm whoami",
+    "login": "npm login",
+    "check": "npm run whoami || npm login",
+    "prepublish": "npm config delete registry",
+    "publish": "npm run check && npm publish",
+    "postpublish": "npm config set registry=https://registry.npm.taobao.org",
+    "publish:patch": "npm version patch && npm run publish",
+    "publish:minor": "npm version minor && npm run publish",
+    "publish:major": "npm version major && npm run publish"
   },
   "keywords": [],
-  "author": "muzhidong",
+  "author": "muzhidong <be_your_best@163.com>",
   "license": "ISC",
   "dependencies": {
     "cli-table3": "^0.6.0",
