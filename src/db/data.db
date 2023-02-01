@@ -1,41 +1,19 @@
-{"name":"video-view","path":"src/common-components/video-view","class":"UI型其他通用组件","desc":"视频组件","type":"component","_id":"0HCPe0O68wrIlNE1"}
-{"name":"pull-down-list","path":"src/common-components/pull-down-list","class":"UI型列表、条目组件","desc":"下拉列表","type":"component","_id":"2QQzmyftjc7aPq48"}
-{"name":"panel","path":"src/common-components/panel","class":"UI型盒组件","desc":"面板","type":"component","_id":"A06SPm0Tcr887atV"}
-{"name":"table","path":"src/common-components/table","class":"UI型表格组件","desc":"表格","type":"component","_id":"AXShWsOdDq7IdLCh"}
-{"name":"recommend-list","path":"src/common-components/recommend-list","class":"UI型列表、条目组件","desc":"推荐列表","type":"component","_id":"CbERYjBBkbikoSkr"}
-{"name":"label-textarea","path":"src/common-components/label-textarea","class":"UI型表单处理组件","desc":"文本区域","type":"component","_id":"Cr55WuGUzd32YOeC"}
-{"name":"num-header","path":"src/common-components/num-header","class":"UI型其他通用组件","desc":"带数字序号的区域头部","type":"component","_id":"DRvluXdH2Wzvpdk0"}
-{"name":"canvas-to-image","path":"src/common-components/canvas-to-image","class":"功能组件","desc":"画布转图片","type":"component","_id":"ElNwG1S64mOOH5n6"}
-{"name":"button-group","path":"src/common-components/button-group","class":"UI型其他通用组件","desc":"按钮组","type":"component","_id":"G5Hs2Gt3grKwWM4N"}
-{"name":"text-identification","path":"src/common-components/text-identification","class":"UI型文本处理组件","desc":"文本识别","type":"component","_id":"GtfpPadVWSI8EIc1"}
-{"name":"two-column-list","path":"src/common-components/two-column-list","class":"UI型列表、条目组件","desc":"双列列表","type":"component","_id":"HjYEyvjISEIZfsbV"}
-{"name":"label-picker","path":"src/common-components/label-picker","class":"UI型表单处理组件","desc":"选择器","type":"component","_id":"IxtNuXEMIPDx4vt4"}
-{"name":"image-list","path":"src/common-components/image-list","class":"UI型图片处理组件","desc":"图片列表","type":"component","_id":"JQ2f72hNfedavvGr"}
-{"name":"upload-image","path":"src/common-components/upload-image","class":"UI型图片处理组件","desc":"图片上传（支持单图片即时上传）","type":"component","_id":"JVp2Wurngr2Jhygv"}
-{"name":"card","path":"src/common-components/card","class":"UI型名片组件","desc":"微信名片","type":"component","_id":"NoW40bToXpJdVWyR"}
-{"name":"preview-image","path":"src/common-components/preview-image","class":"UI型图片处理组件","desc":"图片预览","type":"component","_id":"NwWFx3yIl4sQ4Ts0"}
-{"name":"link-view","path":"src/common-components/link-view","class":"UI型其他通用组件","desc":"链接","type":"component","_id":"OvSJtqtr5dDpjoc6"}
-{"name":"select-box","path":"src/common-components/select-box","class":"UI型表单处理组件","desc":"复选框","type":"component","_id":"Sl09vm7mguSRgKcj"}
-{"name":"chat","path":"src/common-components/chat","class":"功能组件","desc":"聊天页","type":"component","_id":"ZabqaM3ONsVQqlTU"}
-{"name":"image-collect","path":"src/common-components/image-collect","class":"UI型图片处理组件","desc":"图片上传（上传逻辑自行外部实现）","type":"component","_id":"aViYonfqIFB5gXze"}
-{"name":"orange-box","path":"src/common-components/orange-box","class":"UI型盒组件","desc":"橘色盒","type":"component","_id":"b1gvEDg40Lhfdbwg"}
-{"name":"personal-card","path":"src/common-components/personal-card","class":"UI型名片组件","desc":"个人名片","type":"component","_id":"c7g6ADO6QIGyIrfB"}
-{"name":"standard-box","path":"src/common-components/standard-box","class":"UI型盒组件","desc":"标准盒","type":"component","_id":"cZ4QX1OJt4gMraca"}
-{"name":"message-item","path":"src/common-components/message-item","class":"UI型列表、条目组件","desc":"消息条目","type":"component","_id":"fhn9Uhn0Sh3emFPG"}
-{"name":"get-discount-modal","path":"src/business-components/get-discount-modal","class":"业务组件","desc":"优惠对话框","type":"component","_id":"jOD6L4gFqM8LCqHo"}
-{"name":"photo-identification","path":"src/common-components/photo-identification","class":"功能组件","desc":"拍照或选择相册OCR识别","type":"component","_id":"kSDmVFBcdRJRmybR"}
-{"name":"kg-*[text|input|switch|picker|search-input|expandable-text|expandable-picker]","path":"src/common-templates","class":"表单模板","desc":"包括文本框、输入框、开关、选择器、搜索提示输入框、可展开的文本框、可展开的选择器","type":"component","_id":"klg3oiKerqWw41NZ"}
-{"name":"tip-header","path":"src/common-components/tip-header","class":"UI型其他通用组件","desc":"带提示的区域头部","type":"component","_id":"lJ2ZVMLuP3WiAyGP"}
-{"name":"image-cropper","path":"src/common-components/image-cropper","class":"UI型图片处理组件","desc":"图片裁剪器","type":"component","_id":"mJNuPFcI97EaHI5M"}
-{"name":"nav-bar","path":"src/common-components/nav-bar","class":"UI型其他通用组件","desc":"导航栏","type":"component","_id":"mLqqh9ORVFfaOe1n"}
-{"name":"base-modal","path":"src/common-components/base-modal","class":"UI型对话框组件","desc":"基本模态框","type":"component","_id":"nyqK38ybSzlDcdJ4"}
-{"name":"label-input","path":"src/common-components/label-input","class":"UI型表单处理组件","desc":"输入框","type":"component","_id":"o9Hu9l2wcLYqNBbw"}
-{"type":"config","name":"init","value":1,"_id":"oAuHliAm8ZZ985wp"}
-{"name":"get-discount","path":"src/business-components/get-discount","class":"业务组件","desc":"优惠","type":"component","_id":"pQRo7k4EZK6j2n8a"}
-{"name":"authorize-modal","path":"src/business-components/authorize-modal","class":"业务组件","desc":"授权对话框","type":"component","_id":"qqkCrmdv1UyRNQxb"}
-{"name":"abbreviation-text","path":"src/common-components/abbreviation-text","class":"UI型文本处理组件","desc":"支持展开折叠的多行文本","type":"component","_id":"sgSjZj5yqHrhA3mp"}
-{"name":"image-swiper","path":"src/common-components/image-swiper","class":"UI型图片处理组件","desc":"图片轮播","type":"component","_id":"tsJxcwjwWXhZiIg6"}
-{"name":"no-content","path":"src/common-components/no-content","class":"UI型其他通用组件","desc":"空内容提示","type":"component","_id":"uEjdVcSEwZC0HoLK"}
-{"name":"nav-pager","path":"src/common-components/nav-pager","class":"UI型其他通用组件","desc":"导航分页器","type":"component","_id":"xnuK3NhmdnhXqviV"}
-{"name":"subscribe-modal","path":"src/business-components/subscribe-modal","class":"业务组件","desc":"模板订阅框","type":"component","_id":"y3WreegiMwYXizmd"}
-{"name":"list-item","path":"src/common-components/list-item","class":"UI型列表、条目组件","desc":"列表条目","type":"component","_id":"zREdf3VuJuDe8EXI"}
+{"name":"uni-tab","path":"https://github.com/muzhidong/lib-components.git -b component/uni-tab","class":"uni","desc":"交互类，Tab组件","type":"component","_id":"0EP2tlBwzxvbOiP8"}
+{"name":"ReactPie","path":"https://github.com/muzhidong/lib-components.git -b component/ReactPie","class":"react","desc":"图表类，饼图组件","type":"component","_id":"A95m1VQrdgCZPTFM"}
+{"name":"ReactImage","path":"https://github.com/muzhidong/lib-components.git -b component/ReactImage","class":"react","desc":"图片类，图片组件","type":"component","_id":"EFNW2hpsCw3pKQqR"}
+{"name":"ReactPagingSlidingScreen","path":"https://github.com/muzhidong/lib-components.git -b component/ReactPagingSlidingScreen","class":"react","desc":"容器类，分页滑屏组件","type":"component","_id":"FueG2KuIeUNoFuUg"}
+{"name":"ReactKeepAlive","path":"https://github.com/muzhidong/lib-components.git -b component/ReactKeepAlive","class":"react","desc":"容器类，缓存组件","type":"component","_id":"GTrbA7mTdRxvO56b"}
+{"name":"ReactMultiInput","path":"https://github.com/muzhidong/lib-components.git -b component/ReactMultiInput","class":"react","desc":"表单类，多值输入组件","type":"component","_id":"KCqMHb2m4CnM003G"}
+{"name":"uni-swiper","path":"https://github.com/muzhidong/lib-components.git -b component/uni-swiper","class":"uni","desc":"交互类，轮播组件","type":"component","_id":"NH4XuENo373mbbz0"}
+{"name":"ReactNativeTab","path":"https://github.com/muzhidong/lib-components.git -b component/ReactNativeTab","class":"react native","desc":"自动聚焦Tab组件","type":"component","_id":"Q4Oa6MlvKlXHpiBj"}
+{"name":"ReactUpload","path":"https://github.com/muzhidong/lib-components.git -b component/ReactUpload","class":"react","desc":"表单类，七牛上传组件","type":"component","_id":"Y6A8zBxELiEt7AKB"}
+{"name":"ReactModal","path":"https://github.com/muzhidong/lib-components.git -b component/ReactModal","class":"react","desc":"弹窗类，支持表单配置的弹窗组件","type":"component","_id":"ac5Z7RlF1iLidVRl"}
+{"name":"ReactBox","path":"https://github.com/muzhidong/lib-components.git -b component/ReactBox","class":"react","desc":"容器类，块组件","type":"component","_id":"b0yvfVM5pz7bM01c"}
+{"name":"uni-cell","path":"https://github.com/muzhidong/lib-components.git -b component/uni-cell","class":"uni","desc":"表单类，单元组件","type":"component","_id":"cRJoNecGQqwR4efd"}
+{"name":"uni-auto-focus-tab","path":"https://github.com/muzhidong/lib-components.git -b component/uni-auto-focus-tab","class":"uni","desc":"交互类，自动聚焦Tab组件","type":"component","_id":"e5WC6aWkrCiu1JI2"}
+{"type":"config","name":"init","value":1,"_id":"fQQ5ML3rQNfGLtov"}
+{"name":"ReactEChart","path":"https://github.com/muzhidong/lib-components.git -b component/ReactEChart","class":"react","desc":"图表类，基于ECharts图表组件","type":"component","_id":"gAnmOZoFgNDyTeA9"}
+{"name":"uni-panel","path":"https://github.com/muzhidong/lib-components.git -b component/uni-panel","class":"uni","desc":"容器类，面板组件","type":"component","_id":"pI8LhUjLR52OJIbg"}
+{"name":"uni-canvas2image","path":"https://github.com/muzhidong/lib-components.git -b component/uni-canvas2image","class":"uni","desc":"工具类，画布转图片组件","type":"component","_id":"qIxoa0QbWk5vBi0g"}
+{"name":"ReactRichTextEditor","path":"https://github.com/muzhidong/lib-components.git -b component/ReactRichTextEditor","class":"react","desc":"编辑器类，基于TinyMCE富文本编辑器组件","type":"component","_id":"rGNV8M0SX6lywwbl"}
+{"name":"ReactLargeStepModalBox","path":"https://github.com/muzhidong/lib-components.git -b component/ReactLargeStepModal","class":"react","desc":"弹窗类，支持步进的大弹窗组件","type":"component","_id":"zKpWnG4mKdsuoSBe"}

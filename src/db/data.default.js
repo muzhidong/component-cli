@@ -1,204 +1,93 @@
 module.exports = {
-
   components: [{
-    name: "canvas-to-image",
-    path: `/canvas-to-image`,
-    class: '功能组件',
-    desc: '画布转图片',
-  }, {
-    name: "photo-identification",
-    path: `/photo-identification`,
-    class: '功能组件',
-    desc: '拍照或选择相册OCR识别',
-  }, {
-    name: "chat",
-    path: `/chat`,
-    class: '功能组件',
-    desc: '聊天页',
-  }, {
-    name: "label-input",
-    path: `/label-input`,
-    class: 'UI型表单处理组件',
-    desc: '输入框',
-  }, {
-    name: "label-picker",
-    path: `/label-picker`,
-    class: 'UI型表单处理组件',
-    desc: '选择器',
-  }, {
-    name: "label-textarea",
-    path: `/label-textarea`,
-    class: 'UI型表单处理组件',
-    desc: '文本区域',
-  }, {
-    name: "select-box",
-    path: `/select-box`,
-    class: 'UI型表单处理组件',
-    desc: '复选框',
-  }, {
-    name: "kg-*[text|input|switch|picker|search-input|expandable-text|expandable-picker]",
-    path: "",
-    class: '表单模板',
-    desc: '包括文本框、输入框、开关、选择器、搜索提示输入框、可展开的文本框、可展开的选择器',
-  }, {
-    name: "image-collect",
-    path: `/image-collect`,
-    class: 'UI型图片处理组件',
-    desc: '图片上传（上传逻辑自行外部实现）',
-  }, {
-    name: "image-cropper",
-    path: `/image-cropper`,
-    class: 'UI型图片处理组件',
-    desc: '图片裁剪器',
-  }, {
-    name: "image-list",
-    path: `/image-list`,
-    class: 'UI型图片处理组件',
-    desc: '图片列表',
-  }, {
-    name: "image-swiper",
-    path: `/image-swiper`,
-    class: 'UI型图片处理组件',
-    desc: '图片轮播',
-  }, {
-    name: "upload-image",
-    path: `/upload-image`,
-    class: 'UI型图片处理组件',
-    desc: '图片上传（支持单图片即时上传）',
-  }, {
-    name: "preview-image",
-    path: `/preview-image`,
-    class: 'UI型图片处理组件',
-    desc: '图片预览',
-  }, {
-    name: "abbreviation-text",
-    path: `/abbreviation-text`,
-    class: 'UI型文本处理组件',
-    desc: '支持展开折叠的多行文本',
-  }, {
-    name: "text-identification",
-    path: `/text-identification`,
-    class: 'UI型文本处理组件',
-    desc: '文本识别',
-  }, {
-    name: "base-modal",
-    path: `/base-modal`,
-    class: 'UI型对话框组件',
-    desc: '基本模态框',
-  }, {
-    name: "list-item",
-    path: `/list-item`,
-    class: 'UI型列表、条目组件',
-    desc: '列表条目',
-  }, {
-    name: "message-item",
-    path: `/message-item`,
-    class: 'UI型列表、条目组件',
-    desc: '消息条目',
-  }, {
-    name: "recommend-list",
-    path: `/recommend-list`,
-    class: 'UI型列表、条目组件',
-    desc: '推荐列表',
-  }, {
-    name: "pull-down-list",
-    path: `/pull-down-list`,
-    class: 'UI型列表、条目组件',
-    desc: '下拉列表',
-  }, {
-    name: "two-column-list",
-    path: `/two-column-list`,
-    class: 'UI型列表、条目组件',
-    desc: '双列列表',
-  }, {
-    name: "table",
-    path: `/table`,
-    class: 'UI型表格组件',
-    desc: '表格',
-  }, {
-    name: "card",
-    path: `/card`,
-    class: 'UI型名片组件',
-    desc: '微信名片',
-  }, {
-    name: "personal-card",
-    path: `/personal-card`,
-    class: 'UI型名片组件',
-    desc: '个人名片',
-  }, {
-    name: "standard-box",
-    path: `/standard-box`,
-    class: 'UI型盒组件',
-    desc: '标准盒',
-  }, {
-    name: "panel",
-    path: `/panel`,
-    class: 'UI型盒组件',
-    desc: '面板',
-  }, {
-    name: "orange-box",
-    path: `/orange-box`,
-    class: 'UI型盒组件',
-    desc: '橘色盒',
-  }, {
-    name: "button-group",
-    path: `/button-group`,
-    class: 'UI型其他通用组件',
-    desc: '按钮组',
-  }, {
-    name: "tip-header",
-    path: `/tip-header`,
-    class: 'UI型其他通用组件',
-    desc: '带提示的区域头部',
-  }, {
-    name: "nav-pager",
-    path: `/nav-pager`,
-    class: 'UI型其他通用组件',
-    desc: '导航分页器',
-  }, {
-    name: "link-view",
-    path: `/link-view`,
-    class: 'UI型其他通用组件',
-    desc: '链接',
-  }, {
-    name: "nav-bar",
-    path: `/nav-bar`,
-    class: 'UI型其他通用组件',
-    desc: '导航栏',
-  }, {
-    name: "no-content",
-    path: `/no-content`,
-    class: 'UI型其他通用组件',
-    desc: '空内容提示',
-  }, {
-    name: "num-header",
-    path: `/num-header`,
-    class: 'UI型其他通用组件',
-    desc: '带数字序号的区域头部',
-  }, {
-    name: "video-view",
-    path: `/video-view`,
-    class: 'UI型其他通用组件',
-    desc: '视频组件',
-  }, {
-    name: "authorize-modal",
-    path: `/authorize-modal`,
-    class: '业务组件',
-    desc: '授权对话框',
-  }, {
-    name: "get-discount",
-    path: `/get-discount`,
-    class: '业务组件',
-    desc: '优惠',
-  }, {
-    name: "get-discount-modal",
-    path: `/get-discount-modal`,
-    class: '业务组件',
-    desc: '优惠对话框',
-  }, {
-    name: "subscribe-modal",
-    path: `/subscribe-modal`,
-    class: '业务组件',
-    desc: '模板订阅框',
-  }]
-}
+    name: "ReactBox",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactBox",
+    class: 'react',
+    desc: '容器类，块组件',
+  },{
+    name: "ReactEChart",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactEChart",
+    class: 'react',
+    desc: '图表类，基于ECharts图表组件',
+  },{
+    name: "ReactImage",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactImage",
+    class: 'react',
+    desc: '图片类，图片组件',
+  },{
+    name: "ReactKeepAlive",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactKeepAlive",
+    class: 'react',
+    desc: '容器类，缓存组件',
+  },{
+    name: "ReactLargeStepModalBox",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactLargeStepModal",
+    class: 'react',
+    desc: '弹窗类，支持步进的大弹窗组件',
+  },{
+    name: "ReactModal",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactModal",
+    class: 'react',
+    desc: '弹窗类，支持表单配置的弹窗组件',
+  },{
+    name: "ReactMultiInput",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactMultiInput",
+    class: 'react',
+    desc: '表单类，多值输入组件',
+  },{
+    name: "ReactPagingSlidingScreen",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactPagingSlidingScreen",
+    class: 'react',
+    desc: '容器类，分页滑屏组件',
+  },{
+    name: "ReactPie",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactPie",
+    class: 'react',
+    desc: '图表类，饼图组件',
+  },{
+    name: "ReactRichTextEditor",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactRichTextEditor",
+    class: 'react',
+    desc: '编辑器类，基于TinyMCE富文本编辑器组件',
+  },{
+    name: "ReactNativeTab",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactNativeTab",
+    class: 'react native',
+    desc: '自动聚焦Tab组件',
+  },{
+    name: "ReactUpload",
+    path: "https://github.com/muzhidong/lib-components.git -b component/ReactUpload",
+    class: 'react',
+    desc: '表单类，七牛上传组件',
+  },{
+    name: "uni-auto-focus-tab",
+    path: "https://github.com/muzhidong/lib-components.git -b component/uni-auto-focus-tab",
+    class: 'uni',
+    desc: '交互类，自动聚焦Tab组件',
+  },{
+    name: "uni-canvas2image",
+    path: "https://github.com/muzhidong/lib-components.git -b component/uni-canvas2image",
+    class: 'uni',
+    desc: '工具类，画布转图片组件',
+  },{
+    name: "uni-cell",
+    path: "https://github.com/muzhidong/lib-components.git -b component/uni-cell",
+    class: 'uni',
+    desc: '表单类，单元组件',
+  },{
+    name: "uni-panel",
+    path: "https://github.com/muzhidong/lib-components.git -b component/uni-panel",
+    class: 'uni',
+    desc: '容器类，面板组件',
+  },{
+    name: "uni-swiper",
+    path: "https://github.com/muzhidong/lib-components.git -b component/uni-swiper",
+    class: 'uni',
+    desc: '交互类，轮播组件',
+  },{
+    name: "uni-tab",
+    path: "https://github.com/muzhidong/lib-components.git -b component/uni-tab",
+    class: 'uni',
+    desc: '交互类，Tab组件',
+  },]
+}  
