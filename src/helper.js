@@ -106,7 +106,6 @@ function promptPromise(question) {
 }
 
 function handleException(err) {
-
   // console.log(err);
   console.log(chalk.red.bold('程序出现异常，请重新执行'));
   process.exit(1);
@@ -117,7 +116,6 @@ function warn(content) {
 }
 
 function dirIsExist(dirPath) {
-
   try {
     // 读取源目录，检查源目录是否存在
     fs.readdirSync(dirPath);
