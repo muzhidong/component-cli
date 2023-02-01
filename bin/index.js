@@ -38,7 +38,7 @@ async function init() {
     printHelp();
   });
 
-  // 仅输入kg-cli时的处理
+  // 仅输入cpn-cli时的处理
   if (process.argv.length === 2) {
     printHelp();
   };

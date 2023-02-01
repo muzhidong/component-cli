@@ -8,13 +8,10 @@ const update = require('./update');
 
 const list = require('./list');
 
-const config = require('./config');
-
 module.exports = {
   select,
   add,
   del,
   update,
   list,
-  config,
 }
