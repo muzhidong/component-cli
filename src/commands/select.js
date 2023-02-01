@@ -67,15 +67,7 @@ function doCopy(src, dest) {
 
 function handleTemplateFromGit(cmd, spinner){
   const repoName = cmd.replace(/.*\/(.*)\.git.*/, '$1');
-
-  let branchName = cmd.replace(/.*\-b (.*) .*/, '$1');
-  branchName = branchName === cmd? '' : branchName;
-
-  let command = `rm -rf ${repoName}/.git`;
-  if(branchName){
-    command += ` && mv ${repoName} ${branchName}`
-  }
-
+  const command = `rm -rf ${repoName}/.git && mv ${repoName}/* . && rm -rf ${repoName}`;
   execCmd(command, function() {
     spinner.succeed('引入组件成功');
   })
