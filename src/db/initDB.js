@@ -1,9 +1,10 @@
 const DataBase = require('nedb');
 
-const data = require('./data.default.js');
 const {
   handleException
 } = require('../helper');
+
+const data = require('./data.default.js');
 
 const db = new DataBase({
   // 不带文件名默认为内存数据库
@@ -25,12 +26,7 @@ function initDB() {
           return;
         }
 
-        let initData = [].concat(data.templates.map(item => {
-          return {
-            ...item,
-            type: 'template',
-          }
-        }), data.components.map(item => {
+        let initData = [].concat(data.components.map(item => {
           return {
             ...item,
             type: 'component',

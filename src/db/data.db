@@ -1,6 +1,5 @@
 {"name":"video-view","path":"src/common-components/video-view","class":"UI型其他通用组件","desc":"视频组件","type":"component","_id":"0HCPe0O68wrIlNE1"}
 {"name":"pull-down-list","path":"src/common-components/pull-down-list","class":"UI型列表、条目组件","desc":"下拉列表","type":"component","_id":"2QQzmyftjc7aPq48"}
-{"type":"config","name":"cmpPath","path":"/Users/mudong/Downloads/kg-wxapplet-components","_id":"9gnjBXwKqr8R9N6T"}
 {"name":"panel","path":"src/common-components/panel","class":"UI型盒组件","desc":"面板","type":"component","_id":"A06SPm0Tcr887atV"}
 {"name":"table","path":"src/common-components/table","class":"UI型表格组件","desc":"表格","type":"component","_id":"AXShWsOdDq7IdLCh"}
 {"name":"recommend-list","path":"src/common-components/recommend-list","class":"UI型列表、条目组件","desc":"推荐列表","type":"component","_id":"CbERYjBBkbikoSkr"}
@@ -10,7 +9,6 @@
 {"name":"button-group","path":"src/common-components/button-group","class":"UI型其他通用组件","desc":"按钮组","type":"component","_id":"G5Hs2Gt3grKwWM4N"}
 {"name":"text-identification","path":"src/common-components/text-identification","class":"UI型文本处理组件","desc":"文本识别","type":"component","_id":"GtfpPadVWSI8EIc1"}
 {"name":"two-column-list","path":"src/common-components/two-column-list","class":"UI型列表、条目组件","desc":"双列列表","type":"component","_id":"HjYEyvjISEIZfsbV"}
-{"type":"config","name":"tplPath","path":"/Users/mudong/Downloads/kg-wxapplet-templates","_id":"IvDUvO63etRVI0Bx"}
 {"name":"label-picker","path":"src/common-components/label-picker","class":"UI型表单处理组件","desc":"选择器","type":"component","_id":"IxtNuXEMIPDx4vt4"}
 {"name":"image-list","path":"src/common-components/image-list","class":"UI型图片处理组件","desc":"图片列表","type":"component","_id":"JQ2f72hNfedavvGr"}
 {"name":"upload-image","path":"src/common-components/upload-image","class":"UI型图片处理组件","desc":"图片上传（支持单图片即时上传）","type":"component","_id":"JVp2Wurngr2Jhygv"}
@@ -24,14 +22,12 @@
 {"name":"personal-card","path":"src/common-components/personal-card","class":"UI型名片组件","desc":"个人名片","type":"component","_id":"c7g6ADO6QIGyIrfB"}
 {"name":"standard-box","path":"src/common-components/standard-box","class":"UI型盒组件","desc":"标准盒","type":"component","_id":"cZ4QX1OJt4gMraca"}
 {"name":"message-item","path":"src/common-components/message-item","class":"UI型列表、条目组件","desc":"消息条目","type":"component","_id":"fhn9Uhn0Sh3emFPG"}
-{"name":"tpl-sass","path":"tpl-sass","desc":"sass开发的小程序模板","type":"template","_id":"h3zCsKyPhtBY5IWU"}
 {"name":"get-discount-modal","path":"src/business-components/get-discount-modal","class":"业务组件","desc":"优惠对话框","type":"component","_id":"jOD6L4gFqM8LCqHo"}
 {"name":"photo-identification","path":"src/common-components/photo-identification","class":"功能组件","desc":"拍照或选择相册OCR识别","type":"component","_id":"kSDmVFBcdRJRmybR"}
 {"name":"kg-*[text|input|switch|picker|search-input|expandable-text|expandable-picker]","path":"src/common-templates","class":"表单模板","desc":"包括文本框、输入框、开关、选择器、搜索提示输入框、可展开的文本框、可展开的选择器","type":"component","_id":"klg3oiKerqWw41NZ"}
 {"name":"tip-header","path":"src/common-components/tip-header","class":"UI型其他通用组件","desc":"带提示的区域头部","type":"component","_id":"lJ2ZVMLuP3WiAyGP"}
 {"name":"image-cropper","path":"src/common-components/image-cropper","class":"UI型图片处理组件","desc":"图片裁剪器","type":"component","_id":"mJNuPFcI97EaHI5M"}
 {"name":"nav-bar","path":"src/common-components/nav-bar","class":"UI型其他通用组件","desc":"导航栏","type":"component","_id":"mLqqh9ORVFfaOe1n"}
-{"name":"tpl-subpackage-sass","path":"tpl-subpackage-sass","desc":"sass开发的提供分包小程序模板","type":"template","_id":"n3qTEfdGky7tJ31c"}
 {"name":"base-modal","path":"src/common-components/base-modal","class":"UI型对话框组件","desc":"基本模态框","type":"component","_id":"nyqK38ybSzlDcdJ4"}
 {"name":"label-input","path":"src/common-components/label-input","class":"UI型表单处理组件","desc":"输入框","type":"component","_id":"o9Hu9l2wcLYqNBbw"}
 {"type":"config","name":"init","value":1,"_id":"oAuHliAm8ZZ985wp"}
