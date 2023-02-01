@@ -18,8 +18,10 @@ async function handleListAction(type = 'component') {
   if (res.state === 'success') {
 
     let table = new Table({
-      head: ['类别', '组件名称', '组件描述'],
+      head: ['可应用的框架类型', '组件名称', '组件说明'],
       colWidths: [20, 30, 60],
+      wordWrap: true,
+      headHAlign: 'center',
     });
 
     let arr = res.data.map(item => {
