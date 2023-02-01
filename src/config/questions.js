@@ -83,7 +83,7 @@ const addDesc = {
 const addSrcPath = {
   type: 'input',
   name: 'addSrcPath',
-  message: '请输入组件链接：',
+  message: '请输入组件路径或链接（只支持本地路径或git仓库，如非main分支，则最后加 -b 分支名）：',
   validate: function(val) {
     if (/^http(s)?/g.test(val)) {
       return true;
@@ -150,7 +150,7 @@ const modifyClass = {
 const updateSrcPath = {
   type: 'input',
   name: 'updateSrcPath',
-  message: '请输入组件路径或链接：',
+  message: '请输入组件路径或链接（只支持本地路径或git仓库，如非main分支，则最后加 -b 分支名）：',
   default: undefined,
   validate: function(val) {
     if (/^http(s)?/g.test(val)) {

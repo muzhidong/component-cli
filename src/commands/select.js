@@ -4,11 +4,11 @@ const {
 const inquirer = require('inquirer');
 const autocomplete = require('inquirer-autocomplete-prompt');
 const ora = require('ora');
-const download = require('download-git-repo');
 
 const {
   promptPromise,
   handleException,
+  execCmd
 } = require('../helper');
 
 const openDB = require('../db/dao');
@@ -65,6 +65,22 @@ function doCopy(src, dest) {
   });
 }
 
+function handleTemplateFromGit(cmd, spinner){
+  const repoName = cmd.replace(/.*\/(.*)\.git.*/, '$1');
+
+  let branchName = cmd.replace(/.*\-b (.*) .*/, '$1');
+  branchName = branchName === cmd? '' : branchName;
+
+  let command = `rm -rf ${repoName}/.git`;
+  if(branchName){
+    command += ` && mv ${repoName} ${branchName}`
+  }
+
+  execCmd(command, function() {
+    spinner.succeed('引入组件成功');
+  })
+}
+
 function doDownload(url, dest) {
 
   let spinner = ora({
@@ -72,26 +88,9 @@ function doDownload(url, dest) {
     color: 'yellow',
   }).start();
 
-  download(`direct:${url}`, dest, {
-    clone: true
-  }, function(err) {
-    if (err) {
-      spinner.fail('引入组件失败，请检查当前路径是否有与组件重名的文件夹');
-      handleException(err);
-    }
-    if (/.*\.git$/g.test(url)) {
-      // 删除.git文件夹
-      let name = url.split('/');
-      name = name[name.length - 1].replace('^(.*)\.git.*$', '$1');
-      exec(`rm -rf ${dest}/${name}/.git`, function(error, stdout, stderr) {
-        if (error) {
-          spinner.fail('请手动删除.git文件夹');
-        }
-        spinner.succeed('引入组件成功');
-      })
-    } else {
-      spinner.succeed('引入组件成功');
-    }
+  execCmd(`git clone ${url}`, function() {
+    // 删除.git文件夹，并将下载的根文件夹命名为分支名
+    handleTemplateFromGit(url, spinner);
   })
 }
 
