@@ -9,19 +9,24 @@ const {
 const CLASSES = ['自定义', 'react', 'vue', 'ng', 'umi', 'uni'];
 
 /** ------------ select start --------------- */
+const selectAppliedFrameworkType = {
+  type: 'autocomplete',
+  name: 'frameworkType',
+  message: '搜索或选择要应用的框架类型：',
+  source: function(answersSoFar, input) {},
+};
+
 const selectComponent = {
-  type: 'rawlist',
+  type: 'autocomplete',
   name: 'component',
-  message: '请选择组件：',
-  default: '0',
-  choices: null,
-  pageSize: 10,
+  message: '搜索或选择组件：',
+  source: function(answersSoFar, input) {},
 };
 
 const selectTargetPath = {
   type: 'input',
   name: 'targetPath',
-  message: '请指定引入组件的目标绝对路径（默认当前路径）：',
+  message: '指定引入组件的目标绝对路径（默认当前路径）：',
   default: path.resolve(),
   validate: function(val) {
     if (dirIsExist(val)) {
@@ -164,7 +169,7 @@ const updateSrcPath = {
 /** ------------ update end --------------- */
 
 module.exports = {
-
+  selectAppliedFrameworkType,
   selectComponent,
   selectTargetPath,
 

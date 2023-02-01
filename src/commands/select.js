@@ -1,7 +1,8 @@
 const {
   exec,
 } = require('child_process');
-
+const inquirer = require('inquirer');
+const autocomplete = require('inquirer-autocomplete-prompt');
 const ora = require('ora');
 const download = require('download-git-repo');
 
@@ -14,6 +15,7 @@ const openDB = require('../db/dao');
 
 // 问题配置数据
 let {
+  selectAppliedFrameworkType,
   selectComponent,
   selectTargetPath,
 } = require('../config/questions');
@@ -23,19 +25,27 @@ let componentData = null;
 
 async function init() {
 
-  let res = await openDB.query();
+  inquirer.registerPrompt('autocomplete', autocomplete);
 
-  if (res.state === 'success') {
-
-    let data = res.data;
+  const {
+    state,
+    data,
+    err,
+  } = await openDB.query();
+  if (state === 'success') {
 
     componentData = data.filter(item => {
       return item.type === 'component'
     });
-    selectComponent.choices = componentData.map(item => item.name);
+
+    let types = Array.from(new Set(data.filter(item => !!item.class).map(item => item.class)));
+    selectAppliedFrameworkType.pageSize = types.length;
+    selectAppliedFrameworkType.source = function(answersSoFar, input) {
+      return Promise.resolve(types.filter(item => item.search(input) > -1));
+    };
 
   } else {
-    handleException(res.err);
+    handleException(err);
   }
 }
 
@@ -87,25 +97,43 @@ function doDownload(url, dest) {
 
 async function execSelectAction() {
 
-  const res = await promptPromise([selectComponent, selectTargetPath]);
+  const {
+    state,
+    data,
+    err,
+  } = await promptPromise([selectAppliedFrameworkType,]);
 
-  if (res.state === 'success') {
-    res = res.data;
+  if (state === 'success') {
+    const {
+      frameworkType
+    } = data;
 
-    let info = componentData.find(item => item.name === res.component);
+    const components = componentData.filter(item => item.class === frameworkType).map(item => item.name);
+    selectComponent.pageSize = components.length;
+    selectComponent.source = function(answersSoFar, input) {
+      return Promise.resolve(components.filter(item => item.search(input) > -1));
+    };
 
-    if (/^http(s)?:\/\//g.test(info.path)) {
-      // 外链则下载。不支持npm下载，初衷是组件是以源码的方式引入，而非模块，方便调整
-      doDownload(info.path, res.targetPath);
+    const res = await promptPromise([selectComponent, selectTargetPath]);
+    if(res.state === 'success'){  
+      const {
+        component,
+        targetPath
+      } = res.data;
+      const info = componentData.find(item => item.name === component);
+      if (/^http(s)?:\/\//g.test(info.path)) {
+        // 外链则下载。不支持npm下载，初衷是组件是以源码的方式引入，而非模块，方便调整
+        doDownload(info.path, targetPath);
+      } else {
+        // 路径则复制
+        doCopy(info.path, targetPath);
+      }
     } else {
-      // 路径则复制
-      doCopy(info.path, res.targetPath);
+      handleException(res.err);
     }
-
   } else {
-    handleException(res.err);
+    handleException(err);
   }
-
 }
 
 async function handleSelectAction() {
