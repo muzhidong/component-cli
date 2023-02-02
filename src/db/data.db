@@ -6,7 +6,7 @@
 {"name":"ReactMultiInput","path":"https://github.com/muzhidong/lib-components.git -b component/ReactMultiInput","class":"react","desc":"表单类，多值输入组件","type":"component","_id":"KCqMHb2m4CnM003G"}
 {"name":"uni-swiper","path":"https://github.com/muzhidong/lib-components.git -b component/uni-swiper","class":"uni","desc":"交互类，轮播组件","type":"component","_id":"NH4XuENo373mbbz0"}
 {"name":"ReactNativeTab","path":"https://github.com/muzhidong/lib-components.git -b component/ReactNativeTab","class":"react native","desc":"自动聚焦Tab组件","type":"component","_id":"Q4Oa6MlvKlXHpiBj"}
-{"name":"ReactUpload","path":"https://github.com/muzhidong/lib-components.git -b component/ReactUpload","class":"react","desc":"表单类，七牛上传组件","type":"component","_id":"Y6A8zBxELiEt7AKB"}
+{"type":"component","name":"ReactUpload","class":"umi","desc":"表单类，七牛上传组件","path":"https://github.com/muzhidong/lib-components.git -b component/ReactUpload","_id":"Y6A8zBxELiEt7AKB"}
 {"name":"ReactModal","path":"https://github.com/muzhidong/lib-components.git -b component/ReactModal","class":"react","desc":"弹窗类，支持表单配置的弹窗组件","type":"component","_id":"ac5Z7RlF1iLidVRl"}
 {"name":"ReactBox","path":"https://github.com/muzhidong/lib-components.git -b component/ReactBox","class":"react","desc":"容器类，块组件","type":"component","_id":"b0yvfVM5pz7bM01c"}
 {"name":"uni-cell","path":"https://github.com/muzhidong/lib-components.git -b component/uni-cell","class":"uni","desc":"表单类，单元组件","type":"component","_id":"cRJoNecGQqwR4efd"}

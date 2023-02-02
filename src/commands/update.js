@@ -50,29 +50,15 @@ async function updateData(params) {
     modifyClass,
     modifyDesc,
     updateSrcPath,
-
     spinner,
   } = params;
 
-  const data = {};
-  if(modifyName){
-    data.name = modifyName;
-  }
-  if (modifyClass) {
-    data.class = modifyClass;
-  }
-  if (modifyDesc) {
-    data.desc = modifyDesc;
-  }
-  if(updateSrcPath){
-    data.path = updateSrcPath;
-  }
-
-  let res = await openDB.update({
-    name: updateComponent,
+  let res = await openDB.update(componentData.find(component => component.name === updateComponent), {
     type: 'component',
-  }, {
-    $set: data,
+    name: modifyName,
+    'class': modifyClass,
+    desc: modifyDesc,
+    path: updateSrcPath,
   });
 
   if (res.state === 'success') {
@@ -84,25 +70,36 @@ async function updateData(params) {
 }
 
 async function execUpdateAction() {
-  let res = await promptPromise([updateComponent, modifyName, modifyClass]);
+  let res = await promptPromise([updateComponent]);
   if (res.state === 'success') {
-    setTimeout(async () => {
+    const {
+      updateComponent,
+    } = res.data;
+
+    // 初始化值
+    const target = componentData.find(component => component.name === updateComponent)|| {};
+    modifyName.default = target.name;
+    modifyClass.default = target.class;
+    modifyDesc.default = target.desc;
+    updateSrcPath.default = target.path;
+
+    res = await promptPromise([modifyName, modifyClass]);
+    if(res.state === 'success'){
       const {
-        updateComponent,
         modifyName,
         modifyClass,
       } = res.data;
-      
+
+      // 是否是自定义类别
       const nextQuestions = [modifyDesc, updateSrcPath];
       if(modifyClass === '自定义'){
         nextQuestions.unshift(setClass);
       }
+  
       res = await promptPromise(nextQuestions);
-
       if (res.state === 'success') {
         const {
           setClass,
-          modifyClass, 
           modifyDesc, 
           updateSrcPath
         } = res.data;
@@ -111,7 +108,7 @@ async function execUpdateAction() {
           text: `开始更新模板或组件...\r\n`,
           color: 'yellow',
         }).start();
-     
+ 
         updateData({
           updateComponent,
           modifyName,
@@ -120,12 +117,13 @@ async function execUpdateAction() {
           updateSrcPath,
           spinner,
         });
-  
+
       } else {
         handleException(res.err);
       }
-      
-    }, 0);
+    } else {
+      handleException(res.err);
+    }
   } else {
     handleException(res.err);
   }

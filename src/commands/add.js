@@ -45,43 +45,43 @@ async function addData(params) {
 async function execAddAction() {
   let res = await promptPromise([addComponent, addClass]);
   if (res.state === 'success') {
-    setTimeout(async () => {
+    
+    const {
+      addComponent,
+      addClass,
+    } = res.data;
+
+    const nextQuestions = [addDesc, addSrcPath];
+    if(addClass === '自定义'){
+      nextQuestions.unshift(setClass);
+    }
+    res = await promptPromise(nextQuestions);
+
+    if(res.state === 'success'){
       const {
-        addComponent,
-        addClass,
+        setClass,
+        addDesc, 
+        addSrcPath
       } = res.data;
-  
-      const nextQuestions = [addDesc, addSrcPath];
-      if(addClass === '自定义'){
-        nextQuestions.unshift(setClass);
+
+      const spinner = ora({
+        text: `开始添加组件...\r\n`,
+        color: 'yellow',
+      }).start();
+
+      const data = {
+        name: addComponent,
+        desc: addDesc,
+        path: addSrcPath,
+        type: 'component',
+        _class: setClass || addClass,
+        spinner,
       }
-      res = await promptPromise(nextQuestions);
-  
-      if(res.state === 'success'){
-        const {
-          setClass,
-          addDesc, 
-          addSrcPath
-        } = res.data;
-  
-        const spinner = ora({
-          text: `开始添加组件...\r\n`,
-          color: 'yellow',
-        }).start();
-  
-        const data = {
-          name: addComponent,
-          desc: addDesc,
-          path: addSrcPath,
-          type: 'component',
-          _class: setClass || addClass,
-          spinner,
-        }
-        addData(data);
-      } else {
-        handleException(res.err);
-      }
-    }, 0);
+      addData(data);
+    } else {
+      handleException(res.err);
+    }
+
   } else {
     handleException(res.err);
   }
