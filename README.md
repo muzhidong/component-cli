@@ -3,6 +3,11 @@
 - 提供select命令，选择组件，引进项目，快速应用；
 - 提供相关操作命令管理组件；
 
+## yarn安装
+```bash
+yarn global add mpj-cli
+```
+
 ## 命令
 - select
 
