@@ -5,7 +5,7 @@
 
 ## yarn安装
 ```bash
-yarn global add mpj-cli
+yarn global add cpn-cli
 ```
 
 ## 命令
