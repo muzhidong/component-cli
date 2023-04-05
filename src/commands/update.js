@@ -5,7 +5,6 @@ const ora = require('ora');
 const {
   promptPromise,
   handleException,
-  execCmd,
 } = require('../helper');
 
 const openDB = require('../db/dao');

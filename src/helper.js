@@ -1,7 +1,6 @@
 const commander = require('commander');
 const inquirer = require('inquirer');
 const chalk = require('chalk');
-const Rx = require('rxjs');
 const fs = require('fs');
 const {
   exec,
@@ -79,12 +78,12 @@ function dirIsExist(dirPath) {
   }
 }
 
-function execCmd(cmd, cb, params) {
+function execCmd({ cmd, successCb, successParams, errorCb }) {
   exec(cmd, function(error, stdout, stderr) {
     if (error) {
-      handleException(error);
+      errorCb? errorCb(error): handleException(error);
     } else {
-      cb && cb(params);
+      successCb && successCb(successParams);
     }
   });
 }

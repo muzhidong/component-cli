@@ -50,26 +50,27 @@ async function init() {
 }
 
 function doCopy(src, dest) {
-
   let spinner = ora({
     text: `开始引入组件...\r\n`,
     color: 'yellow',
   }).start();
 
-  exec(`cp -rf ${src} ${dest}`, function(error, stdout, stderr) {
-    if (error) {
-      spinner.fail('引入组件失败');
-      handleException(error);
+  execCmd({
+    cmd: `cp -rf ${src} ${dest}`,
+    successCb: function () {
+      spinner.succeed('引入组件成功');
     }
-    spinner.succeed('引入组件成功');
-  });
+  })
 }
 
-function handleTemplateFromGit(cmd, spinner){
+function handleTemplateFromGit(cmd, dest, spinner){
   const repoName = cmd.replace(/.*\/(.*)\.git.*/, '$1');
-  const command = `rm -rf ${repoName}/.git && mv ${repoName}/* . && rm -rf ${repoName}`;
-  execCmd(command, function() {
-    spinner.succeed('引入组件成功');
+  const command = `rm -rf ${repoName}/.git && mv ${repoName}/* ${dest} && rm -rf ${repoName}`;
+  execCmd({
+    cmd: command,
+    successCb: function () {
+      spinner.succeed('引入组件成功');
+    }
   })
 }
 
@@ -79,10 +80,16 @@ function doDownload(url, dest) {
     text: `开始引入组件...\r\n下载需要一定时间，请耐心等待...`,
     color: 'yellow',
   }).start();
-
-  execCmd(`git clone ${url}`, function() {
-    // 删除.git文件夹，并将下载的根文件夹命名为分支名
-    handleTemplateFromGit(url, spinner);
+  execCmd({
+    cmd: `git clone ${url}`,
+    successCb: function() {
+      // 删除.git文件夹，并将下载的根文件夹命名为分支名
+      handleTemplateFromGit(url, dest, spinner);
+    },
+    errorCb: function () { 
+      spinner.fail('下载组件失败，重试一下');
+      process.exit(1);
+    }
   })
 }
 
