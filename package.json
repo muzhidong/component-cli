@@ -1,6 +1,6 @@
 {
   "name": "cpn-cli",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "一个提供快速引入各种前端框架编写的可复用组件的脚手架",
   "bin": {
     "cpn-cli": "./bin/index.js"
